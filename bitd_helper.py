@@ -45,6 +45,10 @@ def random_full_name():
 
 
 def random_look():
+    """
+    Picks a random "look" for the player / NPC
+    :return: [0] Gender [1] Overall look [2] Clothing choice
+    """
     gender = random.choice(["man", "woman", "ambiguous", "concealed"])
     look = random_from_file("look.txt")
     clothing = random_from_file("clothing.txt")
