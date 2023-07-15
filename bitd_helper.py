@@ -54,3 +54,18 @@ def random_look():
     clothing = random_from_file("clothing.txt")
     return gender, look, clothing
 
+
+def main():
+    alias_true = random.choice([True, False])
+    if alias_true:
+        name = random_full_name()[0]
+    else:
+        name = f"{random_full_name()[1]} {random_full_name()[3]}"
+    print(f"Name:     {name}")
+    print(f"Gender:   {random_look()[0].capitalize()}")
+    print(f"Look:     {random_look()[1]}")
+    print(f"Clothing: {random_look()[2]}")
+
+
+if __name__ == "__main__":
+    main()
